@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #03ff6f;
+  background: #dbffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2699,7 +2699,6 @@ embed {
 }
 .site-meta .site-title {
   font-size: 28px;
-  font-family: 'Comic Sans MS', sans-serif;
   color: #fff;
 }
 .footer {
@@ -2707,14 +2706,12 @@ embed {
   font-size: 16px;
 }
 .footer-inner {
-  font-family: 'Comic Sans MS', sans-serif;
   text-align: center;
   color: #4c618f;
 }
 .site-author-name {
   margin: 48px 0 0;
   color: #090909;
-  font-family: 'Comic Sans MS', sans-serif;
 }
 .links-of-blogroll {
   font-size: 14px;
