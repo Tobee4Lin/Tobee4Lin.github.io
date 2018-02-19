@@ -94,7 +94,7 @@
 <meta property="og:description" content="一篇水水的技术分享。大佬勿喷">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://pic1.zhimg.com/v2-d4c1239e75c02e8482c22017a6c8d407_r.jpg">
-<meta property="og:updated_time" content="2018-02-19T14:36:58.358Z">
+<meta property="og:updated_time" content="2018-02-19T14:44:08.545Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="遇见hexo">
 <meta name="twitter:description" content="一篇水水的技术分享。大佬勿喷">
@@ -410,11 +410,11 @@
 <p>一篇水水的技术分享。大佬勿喷<br><a id="more"></a><br>大概很久之前就想拥有属于自己的博客了，自己是想完全靠自己搭建一个包括网站源代码，域名服务器购买，网站备案都由自己搞定，但是总是没时间后来就忘记了。之后听说<strong>Hexo</strong>可以帮我们搭建属于自己的博客而且也没有其他现有博客那么多限制，可以自己DIY。于是我就跟着<strong>hexo</strong>官方文档还有<strong>Next</strong>主题的官方文档一步一步搭建起现在的这个博客。接下来分享一些搭建时候的心路历程。</p>
 <h4 id="HEXO"><a href="#HEXO" class="headerlink" title="HEXO"></a>HEXO</h4><blockquote>
 <p>Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Heroku上，是搭建博客的首选框架。这里我选用的是GitHub。如果想要更加全面的了解Hexo，可以到其官网了解更多的细节。</p>
+</blockquote>
 <h4 id="下载node，git"><a href="#下载node，git" class="headerlink" title="下载node，git"></a>下载node，git</h4><ol>
 <li>在下载git的过程中不要点击“仅仅使用git bash”，点击“与Windows命令行结合”，本人遇到的坑就在这里，使用命令行输入稍后将要输入的命令<code>hexo d</code>进行部署的时候报了错，需要在git bash输入这句语句才有效。<h4 id="GitHub-page的配置"><a href="#GitHub-page的配置" class="headerlink" title="GitHub page的配置"></a>GitHub page的配置</h4>去到GitHub新增一个仓库，名字跟用户名一样，如“yourname.github.io”。<h4 id="用SSH-keys关联Hexo与Github-Pages"><a href="#用SSH-keys关联Hexo与Github-Pages" class="headerlink" title="用SSH keys关联Hexo与Github Pages"></a>用SSH keys关联Hexo与Github Pages</h4>在git bash中输入语句<code>ssh-keygen -t rsa -C &quot;注册Git的邮箱地址&quot;</code>。<br>接着会生成一个密钥，去到存放这个密钥的文件夹中找到id_rsa.pub，如“C:\Users\Administrator.ssh”，将其中内容复制粘贴到<a href="https://github.com/settings/ssh" target="_blank" rel="noopener">https://github.com/settings/ssh</a> 的 new SSH key中。接着输入<code>ssh -T git@github.com</code>查看是否设置成功。<h4 id="新建文件夹放置博客内容"><a href="#新建文件夹放置博客内容" class="headerlink" title="新建文件夹放置博客内容"></a>新建文件夹放置博客内容</h4>在命令行使用npm安装hexo，步骤如下：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-</blockquote>
 <p>此时在浏览器中打开<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就可以浏览博客了。</p>
 <h4 id="配置Deployment"><a href="#配置Deployment" class="headerlink" title="配置Deployment"></a>配置Deployment</h4><p>在_config.yml文件中，找到Deployment，然后按照如下修改：</p>
 <blockquote>
