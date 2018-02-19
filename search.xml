@@ -2,13 +2,8 @@
 <search>
   <entry>
     <title><![CDATA[遇见hexo]]></title>
-    <url>%2F2018%2F02%2F19%2F%E9%81%87%E8%A7%81hexo-1%2F</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[landscape]]></title>
-    <url>%2F2018%2F02%2F18%2Flandscape%2F</url>
-    <content type="text"><![CDATA[我的第一篇blog意思意思629]]></content>
+    <url>%2F2018%2F02%2F19%2F%E9%81%87%E8%A7%81hexo%2F</url>
+    <content type="text"><![CDATA[一篇水水的技术分享。大佬勿喷大概很久之前就想拥有属于自己的博客了，自己是想完全靠自己搭建一个包括网站源代码，域名服务器购买，网站备案都由自己搞定，但是总是没时间后来就忘记了。之后听说Hexo可以帮我们搭建属于自己的博客而且也没有其他现有博客那么多限制，可以自己DIY。于是我就跟着hexo官方文档还有Next主题的官方文档一步一步搭建起现在的这个博客。接下来分享一些搭建时候的心路历程。 HEXO Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Heroku上，是搭建博客的首选框架。这里我选用的是GitHub。如果想要更加全面的了解Hexo，可以到其官网了解更多的细节。]]></content>
       <categories>
         <category>随笔</category>
       </categories>
