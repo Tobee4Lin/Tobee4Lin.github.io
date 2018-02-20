@@ -94,7 +94,7 @@
 <meta property="og:description" content="开始学习mongoDB。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://i4.bvimg.com/633051/2a74620cd8d7d8f3.jpg">
-<meta property="og:updated_time" content="2018-02-20T07:42:09.435Z">
+<meta property="og:updated_time" content="2018-02-20T07:49:14.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongo学习笔记(一)">
 <meta name="twitter:description" content="开始学习mongoDB。">
@@ -419,13 +419,13 @@
 <h4 id="运行MongoDB服务端"><a href="#运行MongoDB服务端" class="headerlink" title="运行MongoDB服务端"></a>运行MongoDB服务端</h4><p>安装好MongoDB数据库后，我们需要启用服务端才能使用。启用服务的命令是<code>mongod</code>。<br>打开命令行，执行<code>mongod</code>。在命令中直接输入<code>mongod</code>，但是你会发现服务并没有启动，报了一个exception，服务停止了。这是因为我们需要在安装盘的根目录，建立data/db,这两个mongodb需要文件夹。<br>新建所需文件夹之后再次运行<code>mongod</code>，这时候服务就可以开启了，链接默认端口是<strong>27017</strong>。</p>
 <h4 id="链接MongoDB服务端"><a href="#链接MongoDB服务端" class="headerlink" title="链接MongoDB服务端"></a>链接MongoDB服务端</h4><p>开启MongoDB服务器之后，我们需要进行链接。命令行操作为<code>mongo</code>。</p>
 <h4 id="一些常用的mongo基本命令"><a href="#一些常用的mongo基本命令" class="headerlink" title="一些常用的mongo基本命令"></a>一些常用的mongo基本命令</h4><p>我们都知道关系型的数据库，如mysql，oracle等都是采用SQL语句进行数据库增删查改的。而非关系型数据库中的佼佼者MongoDB则采用前端人员熟知的JavaScript语言进行数据库操作。<br>可以来一段代码看看：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function tobee() &#123;</span><br><span class="line">	return &quot;welcome to tobee&apos;s blog&quot;;</span><br><span class="line">&#125;</span><br><span class="line">print(tobee()); //使用print进行打印而不能再使用console.log</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">tobee</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="string">"welcome to tobee's blog"</span>;</span><br><span class="line">&#125;</span><br><span class="line">print(tobee()); <span class="comment">//使用print进行打印而不能再使用console.log</span></span><br></pre></td></tr></table></figure>
 <h5 id="一些基础命令"><a href="#一些基础命令" class="headerlink" title="一些基础命令"></a>一些基础命令</h5><p><code>show dbs</code>  ——  查看存在的数据库。原始存在<strong>admin</strong>和<strong>local</strong>两个数据库<br><code>db.version()</code>  ——  查看数据库版本<br><code>db</code>  ——  显示当前使用的数据库的名称<br><code>use XXX</code>   ——  切换至某个数据库（若没有，则新建）<br><code>show collection</code>  ——  查看数据库的集合<br><code>db.集合.insert()</code>  ——  新建数据集合和插入文件。如<code>db.user.insert({&quot;name&quot;:&quot;tobee&quot;})</code><br><code>db.集合.find()</code>  ——  查询所有数据<br><code>db.集合.update({查询条件}，{修改条件})</code>  ——  修改文件数据<br><code>db.集合.remove(条件)</code> ——  删除文件数据。如<code>db.user.remove({&quot;name&quot;:&quot;tobee&quot;})</code></p>
 <h4 id="用js文件写mongo命令"><a href="#用js文件写mongo命令" class="headerlink" title="用js文件写mongo命令"></a>用js文件写mongo命令</h4><p>我们如果在命令行对我们数据库中的文件增删查改的话，会发现操作起来十分麻烦。这时候我们可以将需要操作的命令全部写在一个js文件中，再用mongo命令执行就可以了。</p>
 <ul>
 <li>新建test.js，在其中新建一个数据库</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var db = connect(&quot;user&quot;); //有则连接，没有则创建</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> db = connect(<span class="string">"user"</span>); <span class="comment">//有则连接，没有则创建</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>终端执行命令</li>
 </ul>
