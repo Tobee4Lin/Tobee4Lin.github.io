@@ -94,7 +94,7 @@
 <meta property="og:description" content="学习mongoDB的修改(update)操作。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://i1.bvimg.com/633051/743a5804d94aa2c7.png">
-<meta property="og:updated_time" content="2018-02-21T07:55:37.295Z">
+<meta property="og:updated_time" content="2018-02-21T08:01:08.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongo学习笔记（二）">
 <meta name="twitter:description" content="学习mongoDB的修改(update)操作。">
@@ -406,7 +406,8 @@
       
 
       
-        <p>学习mongoDB的修改(update)操作。<br><a id="more"></a><br><img src="http://i1.bvimg.com/633051/743a5804d94aa2c7.png" alt="学习mongoDB更新操作"></p>
+        <p><img src="http://i1.bvimg.com/633051/743a5804d94aa2c7.png" alt="学习mongoDB更新操作"></p>
+<p>学习mongoDB的修改(update)操作。<br><a id="more"></a></p>
 <p>昨晚跟朋友出去浪了，没有继续学习，只能今天学习然后更下博客啦。</p>
 <p>今天照着<a href="http://jspang.com/2017/12/16/mongdb/#08update" target="_blank" rel="noopener">技术胖的博客</a>继续学习了mongoDB的更新操作。</p>
 <p>首先先把例子前提搭好：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> workmate =&#123; </span><br><span class="line">    name:<span class="string">'Mike'</span>,</span><br><span class="line">    age:<span class="number">20</span>,</span><br><span class="line">    sex:<span class="number">1</span>,</span><br><span class="line">    job:<span class="string">'UI设计'</span>,</span><br><span class="line">    skill:&#123;</span><br><span class="line">        skillOne:<span class="string">'PhotoShop'</span>,</span><br><span class="line">        SkillTwo:<span class="string">'UI'</span>,</span><br><span class="line">        SkillThree:<span class="string">'Word+Excel+PPT'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    regeditTime:<span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> db = connect(<span class="string">'company'</span>);</span><br><span class="line"><span class="comment">//创建company数据库</span></span><br><span class="line">db.workmate.insert(workmate);</span><br><span class="line"><span class="comment">//新建workmate集合</span></span><br></pre></td></tr></table></figure></p>
