@@ -86,19 +86,19 @@
 
 
 
-<meta name="description" content="来聊聊git。">
+<meta name="description" content="学习mongoDB的查询(find)操作。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重拾git">
-<meta property="og:url" content="http://yoursite.com/2018/02/20/重拾git/index.html">
+<meta property="og:title" content="mongo学习笔记（三）">
+<meta property="og:url" content="http://yoursite.com/2018/02/23/mongo学习笔记（三）/index.html">
 <meta property="og:site_name" content="Tobee4Lin">
-<meta property="og:description" content="来聊聊git。">
+<meta property="og:description" content="学习mongoDB的查询(find)操作。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://i4.bvimg.com/633051/61d32ef9f80a0f1d.png">
-<meta property="og:updated_time" content="2018-02-20T07:45:10.807Z">
+<meta property="og:image" content="http://i2.bvimg.com/633051/013e4ea138fbe635.jpg">
+<meta property="og:updated_time" content="2018-02-23T08:03:55.167Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重拾git">
-<meta name="twitter:description" content="来聊聊git。">
-<meta name="twitter:image" content="http://i4.bvimg.com/633051/61d32ef9f80a0f1d.png">
+<meta name="twitter:title" content="mongo学习笔记（三）">
+<meta name="twitter:description" content="学习mongoDB的查询(find)操作。">
+<meta name="twitter:image" content="http://i2.bvimg.com/633051/013e4ea138fbe635.jpg">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/20/重拾git/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/23/mongo学习笔记（三）/"/>
 
 
 
 
 
-  <title>重拾git | Tobee4Lin</title>
+  <title>mongo学习笔记（三） | Tobee4Lin</title>
   
 
 
@@ -286,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/20/重拾git/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/23/mongo学习笔记（三）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tobee">
@@ -303,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">重拾git</h1>
+          <h1 class="post-title" itemprop="name headline">mongo学习笔记（三）</h1>
         
 
         <div class="post-meta">
@@ -315,8 +315,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-20T14:17:09+08:00">
-                2018-02-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-23T15:07:27+08:00">
+                2018-02-23
               </time>
             
 
@@ -369,7 +369,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  609 字
+                  841 字
                 </span>
               
 
@@ -385,7 +385,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -406,32 +406,30 @@
       
 
       
-        <p><img src="http://i4.bvimg.com/633051/61d32ef9f80a0f1d.png" alt="git微教程"></p>
-<p>来聊聊git。<br><a id="more"></a><br>从我接触<strong>git</strong>开始算起应该是有半年多的时间了，那时候需要帮学校朋友的一个小项目写一个移动端网页然后让大家可以访问，后来了解到GitHub page就可以做到无需购买域名和服务器就可以帮我们托管自己的网站。所以我开始学习git然后现在重新回想下记录下来。</p>
-<h4 id="git"><a href="#git" class="headerlink" title="git"></a>git</h4><blockquote>
-<p>Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。<br>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus Torvalds(Linux的发明者) 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
+        <p><img src="http://i2.bvimg.com/633051/013e4ea138fbe635.jpg" alt="学习mongoDB查询操作"></p>
+<p>学习mongoDB的查询(find)操作。<br><a id="more"></a></p>
+<p>今天照着<a href="http://jspang.com/2017/12/16/mongdb/#08update" target="_blank" rel="noopener">技术胖的博客</a>继续学习了mongoDB的查询操作。</p>
+<p>首先先把例子前提搭好：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> workmate1 = &#123;</span><br><span class="line">    name: <span class="string">'JSPang'</span>,</span><br><span class="line">    age: <span class="number">33</span>,</span><br><span class="line">    sex: <span class="number">1</span>,</span><br><span class="line">    job: <span class="string">'前端'</span>,</span><br><span class="line">    skill: &#123;</span><br><span class="line">        skillOne: <span class="string">'HTML+CSS'</span>,</span><br><span class="line">        skillTwo: <span class="string">'JavaScript'</span>,</span><br><span class="line">        skillThree: <span class="string">'PHP'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    regeditTime: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">    interest: []</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> workmate2 = &#123;</span><br><span class="line">    name: <span class="string">'ShengLei'</span>,</span><br><span class="line">    age: <span class="number">31</span>,</span><br><span class="line">    sex: <span class="number">1</span>,</span><br><span class="line">    job: <span class="string">'JAVA后端'</span>,</span><br><span class="line">    skill: &#123;</span><br><span class="line">        skillOne: <span class="string">'HTML+CSS'</span>,</span><br><span class="line">        skillTwo: <span class="string">'J2EE'</span>,</span><br><span class="line">        skillThree: <span class="string">'PPT'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    regeditTime: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">    interest: []</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> workmate3 = &#123;</span><br><span class="line">    name: <span class="string">'MinJie'</span>,</span><br><span class="line">    age: <span class="number">18</span>,</span><br><span class="line">    sex: <span class="number">0</span>,</span><br><span class="line">    job: <span class="string">'UI'</span>,</span><br><span class="line">    skill: &#123;</span><br><span class="line">        skillOne: <span class="string">'PhotoShop'</span>,</span><br><span class="line">        skillTwo: <span class="string">'UI'</span>,</span><br><span class="line">        skillThree: <span class="string">'PPT'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    regeditTime: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">    interest: []</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> workmate4 = &#123;</span><br><span class="line">    name: <span class="string">'XiaoWang'</span>,</span><br><span class="line">    age: <span class="number">25</span>,</span><br><span class="line">    sex: <span class="number">1</span>,</span><br><span class="line">    job: <span class="string">'UI'</span>,</span><br><span class="line">    skill: &#123;</span><br><span class="line">        skillOne: <span class="string">'PhotoShop'</span>,</span><br><span class="line">        skillTwo: <span class="string">'UI'</span>,</span><br><span class="line">        skillThree: <span class="string">'PPT'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    regeditTime: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">    interest: []</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> workmate5 = &#123;</span><br><span class="line">    name: <span class="string">'LiangPeng'</span>,</span><br><span class="line">    age: <span class="number">28</span>,</span><br><span class="line">    sex: <span class="number">1</span>,</span><br><span class="line">    job: <span class="string">'前端'</span>,</span><br><span class="line">    skill: &#123;</span><br><span class="line">        skillOne: <span class="string">'HTML+CSS'</span>,</span><br><span class="line">        skillTwo: <span class="string">'JavaScript'</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    regeditTime: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">    interest: []</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> workmate6 = &#123;</span><br><span class="line">    name: <span class="string">'HouFei'</span>,</span><br><span class="line">    age: <span class="number">25</span>,</span><br><span class="line">    sex: <span class="number">0</span>,</span><br><span class="line">    job: <span class="string">'前端'</span>,</span><br><span class="line">    skill: &#123;</span><br><span class="line">        skillOne: <span class="string">'HTML+CSS'</span>,</span><br><span class="line">        skillTwo: <span class="string">'JavaScript'</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    regeditTime: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">    interest: []</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> workmate7 = &#123;</span><br><span class="line">    name: <span class="string">'LiuYan'</span>,</span><br><span class="line">    age: <span class="number">35</span>,</span><br><span class="line">    sex: <span class="number">0</span>,</span><br><span class="line">    job: <span class="string">'美工'</span>,</span><br><span class="line">    skill: &#123;</span><br><span class="line">        skillOne: <span class="string">'PhotoShop'</span>,</span><br><span class="line">        skillTwo: <span class="string">'CAD'</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    regeditTime: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">    interest: []</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> workmate8 = &#123;</span><br><span class="line">    name: <span class="string">'DingLu'</span>,</span><br><span class="line">    age: <span class="number">20</span>,</span><br><span class="line">    sex: <span class="number">0</span>,</span><br><span class="line">    job: <span class="string">'美工'</span>,</span><br><span class="line">    skill: &#123;</span><br><span class="line">        skillOne: <span class="string">'PhotoShop'</span>,</span><br><span class="line">        skillTwo: <span class="string">'CAD'</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    regeditTime: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">    interest: []</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> workmate9 = &#123;</span><br><span class="line">    name: <span class="string">'JiaPeng'</span>,</span><br><span class="line">    age: <span class="number">29</span>,</span><br><span class="line">    sex: <span class="number">1</span>,</span><br><span class="line">    job: <span class="string">'前端'</span>,</span><br><span class="line">    skill: &#123;</span><br><span class="line">        skillOne: <span class="string">'HTML+CSS'</span>,</span><br><span class="line">        skillTwo: <span class="string">'JavaScript'</span>,</span><br><span class="line">        skillThree: <span class="string">'PHP'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    regeditTime: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">    interest: []</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> workmate10 = &#123;</span><br><span class="line">    name: <span class="string">'LiJia'</span>,</span><br><span class="line">    age: <span class="number">26</span>,</span><br><span class="line">    sex: <span class="number">0</span>,</span><br><span class="line">    job: <span class="string">'前端'</span>,</span><br><span class="line">    skill: &#123;</span><br><span class="line">        skillOne: <span class="string">'HTML+CSS'</span>,</span><br><span class="line">        skillTwo: <span class="string">'JavaScript'</span>,</span><br><span class="line">        skillThree: <span class="string">'PHP'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    regeditTime: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">    interest: []</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> db = connect(<span class="string">'company'</span>);</span><br><span class="line"><span class="keyword">var</span> workmateArray = [workmate1, workmate2, workmate3, workmate4, workmate5, workmate6, workmate7, workmate8, workmate9, workmate10];</span><br><span class="line">db.workmate.insert(workmateArray);</span><br><span class="line">print(<span class="string">'[SUCCESS]：The data was inserted successfully'</span>);</span><br></pre></td></tr></table></figure></p>
+<h4 id="简单查找"><a href="#简单查找" class="headerlink" title="简单查找"></a>简单查找</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//简单查找</span></span><br><span class="line">db.workmate.find();</span><br><span class="line"><span class="comment">//根据条件查找</span></span><br><span class="line">db.workmate.find(&#123; <span class="string">"skill.skillOne"</span>: <span class="string">"HTML+CSS"</span> &#125;, &#123; <span class="attr">name</span>: <span class="literal">true</span> &#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="不等修饰符"><a href="#不等修饰符" class="headerlink" title="不等修饰符"></a>不等修饰符</h4><blockquote>
+<p>小于(<strong>$lt</strong>):英文全称 less-than</p>
+<p>小于等于(<strong>$lte</strong>)：英文全称 less-than-equal</p>
+<p>大于(<strong>$gt</strong>):英文全称 greater-than</p>
+<p>大于等于(<strong>$gte</strong>):英文全称 greater-than-equal</p>
+<p>不等于(<strong>$ne</strong>):英文全称 not-equal</p>
 </blockquote>
-<h4 id="一步一步来"><a href="#一步一步来" class="headerlink" title="一步一步来"></a>一步一步来</h4><ul>
-<li>先登录GitHub，手动创建新仓库，并复制新的git地址</li>
-<li>首先在目的目录下，右键进入<code>git bash</code></li>
-<li><p>然后<code>git init</code>初始化，让文件夹变成git可管理的仓库<br><code>git add</code>文件名 ：将指定文件上传至暂存区<br><code>git commit -m 相关信息</code> ：将暂存区内容提交到主分支上<br>此时若是第一次使用git上传文件，会提示进行相关内容的配置<br><code>git config --global user.email &quot;your @example.com&quot;</code><br><code>git config --global user.name &quot;your name&quot;</code><br><code>git remote rm origin</code><br><code>git remote add origin &quot;git地址&quot;</code>：将分支与远程仓库地址进行关联<br><code>git push -u origin master</code> ：将本地仓库文件提交到远程仓库</p>
-</li>
-<li><p>此时若发现没有权限，需要公钥</p>
-<ul>
-<li><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code> (一路回车)</li>
-<li>在<code>GitHub</code>的<code>setting</code>界面左边点选<code>SSH and GPG keys</code>，右上角选<code>News SSH key</code></li>
-<li>打开<code>c:/user/administer/.ssh/</code>目录(因人而异哦)，打开<code>id_rsa.pub</code>文件，将其复制到<code>GitHub</code>的<code>key</code>中，<code>title</code>任意输入<br>此时可以开始提交文件至远程仓库，即<code>git push -u origin master</code></li>
-</ul>
-</li>
-<li><p>git clone git地址 ：git克隆项目</p>
-</li>
-</ul>
-<h4 id="一些错误解决方法"><a href="#一些错误解决方法" class="headerlink" title="一些错误解决方法"></a>一些错误解决方法</h4><ol>
-<li>提示出错信息：<code>fatal: remote origin already exists</code><br>输入<code>git remote rm origin</code>，再输入<code>git remote add origin &quot;git地址&quot;</code>。或者直接push</li>
-<li>当远程仓库有一些本地文件没有的文件时，也会报错。此时先全部pull下来，再重新push上去</li>
-</ol>
-<p>更多的git教程可参考廖雪峰的官方教程→<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">Git教程</a></p>
-
+<p>可以根据不等修饰符进行查询。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找年龄小于30大于25岁的人</span></span><br><span class="line">db.workmate.find(</span><br><span class="line">    &#123; <span class="attr">age</span>: &#123; <span class="attr">$lte</span>: <span class="number">30</span>, <span class="attr">$gte</span>: <span class="number">25</span> &#125; &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="literal">true</span>, <span class="attr">age</span>: <span class="literal">true</span>, <span class="string">"skill.skillOne"</span>: <span class="literal">true</span>, <span class="attr">_id</span>: <span class="literal">false</span> &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h4 id="in修饰符"><a href="#in修饰符" class="headerlink" title="$in修饰符"></a>$in修饰符</h4><p>可以进行一个键多个值的查询。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找年龄为25和33的人</span></span><br><span class="line">db.workmate.find(</span><br><span class="line">    &#123; <span class="attr">age</span>: &#123; <span class="attr">$in</span>: [<span class="number">25</span>, <span class="number">33</span>] &#125; &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="number">1</span>, <span class="attr">_id</span>: <span class="number">0</span> &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h4 id="or修饰符"><a href="#or修饰符" class="headerlink" title="$or修饰符"></a>$or修饰符</h4><p>同时进行多个键值的查询。或逻辑。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找年龄大于30或第三项技能为PHP的人</span></span><br><span class="line">db.workmate.find(</span><br><span class="line">    &#123;</span><br><span class="line">        $or: [</span><br><span class="line">            &#123; <span class="attr">age</span>: &#123; <span class="attr">$gte</span>: <span class="number">30</span> &#125; &#125;,</span><br><span class="line">            &#123; <span class="string">"skill.skillThree"</span>: <span class="string">"PHP"</span> &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="number">1</span>, <span class="attr">age</span>: <span class="number">1</span>, <span class="string">"skill.skillThree"</span>: <span class="number">1</span>, <span class="attr">_id</span>: <span class="number">0</span> &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h4 id="and修饰符"><a href="#and修饰符" class="headerlink" title="$and修饰符"></a>$and修饰符</h4><p>同时进行多个键值的查询。与逻辑。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找年龄大于30并且第三项技能为PHP的人</span></span><br><span class="line">db.workmate.find(</span><br><span class="line">    &#123;</span><br><span class="line">        $and: [</span><br><span class="line">            &#123; <span class="attr">age</span>: &#123; <span class="attr">$gte</span>: <span class="number">30</span> &#125; &#125;,</span><br><span class="line">            &#123; <span class="string">"skill.skillThree"</span>: <span class="string">"PHP"</span> &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; <span class="attr">name</span>: <span class="number">1</span>, <span class="attr">age</span>: <span class="number">1</span>, <span class="string">"skill.skillThree"</span>: <span class="number">1</span>, <span class="attr">_id</span>: <span class="number">0</span> &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h4 id="find在js文本中的使用"><a href="#find在js文本中的使用" class="headerlink" title="find在js文本中的使用"></a>find在js文本中的使用</h4><p>使用find进行查询也可以像之前使用update操作一样，将语句写在一个js文件中，然后通过load方法执行该js文件即可。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> db = connect(<span class="string">'company'</span>);</span><br><span class="line"><span class="keyword">var</span> result = db.workmate.find();</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(result.hasNext()) &#123;</span><br><span class="line">    printjson(result.next());</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//打印查询到的所有记录</span></span><br></pre></td></tr></table></figure>
+<p>除了使用while循环，也可以使用forEach，更加方便优雅。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> db = connect(<span class="string">'company'</span>);</span><br><span class="line"><span class="keyword">var</span> result = db.workmate.find();</span><br><span class="line"></span><br><span class="line">result.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">    printjson(res);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -455,8 +453,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/19/杂想/" rel="next" title="杂想">
-                <i class="fa fa-chevron-left"></i> 杂想
+              <a href="/2018/02/21/mongo学习笔记（二）/" rel="next" title="mongo学习笔记（二）">
+                <i class="fa fa-chevron-left"></i> mongo学习笔记（二）
               </a>
             
           </div>
@@ -464,10 +462,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/20/mongo学习笔记（一）/" rel="prev" title="mongo学习笔记(一)">
-                mongo学习笔记(一) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -601,7 +595,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#git"><span class="nav-number">1.</span> <span class="nav-text">git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一步一步来"><span class="nav-number">2.</span> <span class="nav-text">一步一步来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些错误解决方法"><span class="nav-number">3.</span> <span class="nav-text">一些错误解决方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单查找"><span class="nav-number">1.</span> <span class="nav-text">简单查找</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不等修饰符"><span class="nav-number">2.</span> <span class="nav-text">不等修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#in修饰符"><span class="nav-number">3.</span> <span class="nav-text">$in修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#or修饰符"><span class="nav-number">4.</span> <span class="nav-text">$or修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#and修饰符"><span class="nav-number">5.</span> <span class="nav-text">$and修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#find在js文本中的使用"><span class="nav-number">6.</span> <span class="nav-text">find在js文本中的使用</span></a></li></ol></div>
             
 
           </div>
