@@ -98,7 +98,7 @@
 <meta property="og:image" content="http://p4y9hsn68.bkt.clouddn.com/1520004377%281%29.jpg">
 <meta property="og:image" content="http://p4y9hsn68.bkt.clouddn.com/833725438012060717.jpg">
 <meta property="og:image" content="http://p4y9hsn68.bkt.clouddn.com/login.png">
-<meta property="og:updated_time" content="2018-03-02T16:25:05.648Z">
+<meta property="og:updated_time" content="2018-03-02T16:27:10.650Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于学习微信小程序的一些记录">
 <meta name="twitter:description" content="关于微信小程序自己的一些学习历程记录一下吧。">
@@ -373,7 +373,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,024 字
+                  1,030 字
                 </span>
               
 
@@ -413,7 +413,7 @@
         <p><img src="http://p4y9hsn68.bkt.clouddn.com/xQp0S1D7ZTaUFoFy9hwS.jpg" alt="小程序心得记录"></p>
 <p>关于微信小程序自己的一些学习历程记录一下吧。<br><a id="more"></a></p>
 <p>上个学期，经过一个朋友介绍，我有幸参加了学校“挑战杯”其中一个小组的项目，负责该项目的微信小程序部分。那时候我一点都不了解小程序，通过自己慢慢学习摸索，帮助该团队完成了这个项目1.0版本的小程序端后，退出该项目团队。接下来就我个人的学习经历什么的随便写写，算是一种记录。<br>该项目是制作一个健身器材。就我个人而言，我知道健身有在健身房进行大汗淋漓的健身，也有在体侧房进行测量性质之类的健身，我们的项目就是属于后者，制作一个能测量出被测量者的各方面力量。当时硬件方面已经成熟，上位机就绪，可以在机器上进行实验。后台小组以及我负责的小程序都是后来加入的。<br>说回小程序，此处应有图，不过这个项目将来要上市的（团队负责人很有生意头脑），所以意思意思就好。以下的图是在小程序开发助手和web开发者工具看的。<br><img src="http://p4y9hsn68.bkt.clouddn.com/1520004377%281%29.jpg" width="150" align="center"><br><img src="http://p4y9hsn68.bkt.clouddn.com/1520004377%281%29.jpg" alt="">    <img src="http://p4y9hsn68.bkt.clouddn.com/833725438012060717.jpg" alt=""></p>
-<p>来说说小程序的登录。<br>引用小程序官方文档的登录时序图，整个登录流程基本如下图所示：<br><img src="http://p4y9hsn68.bkt.clouddn.com/login.png" alt="小程序登录时序图"><br>该图中，“小程序”指的就是我们使用小程序框架写的代码部分，“第三方服务器”一般就是我们自己的后台服务程序，“微信服务器”是微信官方的API服务器。</p>
+<h3 id="关于登录"><a href="#关于登录" class="headerlink" title="关于登录"></a>关于登录</h3><p>来说说小程序的登录。<br>引用小程序官方文档的登录时序图，整个登录流程基本如下图所示：<br><img src="http://p4y9hsn68.bkt.clouddn.com/login.png" alt="小程序登录时序图"><br>该图中，“小程序”指的就是我们使用小程序框架写的代码部分，“第三方服务器”一般就是我们自己的后台服务程序，“微信服务器”是微信官方的API服务器。</p>
 <h4 id="步骤1：在客户端获取当前登录微信用户的登录凭证-code"><a href="#步骤1：在客户端获取当前登录微信用户的登录凭证-code" class="headerlink" title="步骤1：在客户端获取当前登录微信用户的登录凭证(code)"></a>步骤1：在客户端获取当前登录微信用户的<code>登录凭证(code)</code></h4><p>我们可以使用wx.login()方法得到一个登录凭证，获取该凭证是小程序登录的第一步。</p>
 <p>接着可以在小程序的App代码中发起登录凭证请求，也可以在其他任何Page页面代码中发起登录凭证请求。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">App(&#123;</span><br><span class="line">  onLaunch: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    wx.login(&#123;</span><br><span class="line">      success: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> code = res.code;</span><br><span class="line">        <span class="keyword">if</span> (code) &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">'获取用户登录凭证：'</span> + code);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">'获取用户登录态失败：'</span> + res.errMsg);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -423,7 +423,7 @@
 <p><a href="https://api.weixin.qq.com/sns/jscode2session?`appid=APPID`&amp;`secret=SECRET`&amp;`js_code=JSCODE`&amp;grant_type=authorization_code" target="_blank" rel="noopener">https://api.weixin.qq.com/sns/jscode2session?`appid=APPID`&amp;`secret=SECRET`&amp;`js_code=JSCODE`&amp;grant_type=authorization_code</a><br>其中<code>APPID</code>和<code>SECRET</code>则是申请小程序时候就给出的，可以去小程序后台管理界面查看，JSCODE则是小程序端传递过来的登录凭证<code>code</code>。</p>
 <p>后台代码这里不是我负责，所以没有贴出。不过其实大同小异。</p>
 <p>你自己的后台代码如果成功执行的话，就可以得到<code>openid</code>和<code>session_key</code>。这个信息就是当前微信账户在微信服务器那边的登录态了。<br>至此登录部分就完成了。</p>
-<p>之后就是一些图片上传啊，UI的设计啥的，这些去微信小程序官方文档都能找得到。UI则采用了WeUI（<a href="https://weui.io/" target="_blank" rel="noopener">https://weui.io/</a>）。小程序也采用了数据驱动的方式操作文档，这是很棒的，跟现有的流行框架，如VUE，Angular一样，同时也支持ES6语法。</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>之后就是一些图片上传啊，UI的设计啥的，这些去微信小程序官方文档都能找得到。UI则采用了WeUI（<a href="https://weui.io/" target="_blank" rel="noopener">https://weui.io/</a>）。小程序也采用了数据驱动的方式操作文档，这是很棒的，跟现有的流行框架，如VUE，Angular一样，同时也支持ES6语法。</p>
 <p>总之，这个项目让我体验到前后台合作开发的流程，算是有收获。继续学习下去吧。</p>
 
       
@@ -591,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤1：在客户端获取当前登录微信用户的登录凭证-code"><span class="nav-number">1.</span> <span class="nav-text">步骤1：在客户端获取当前登录微信用户的登录凭证(code)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤2：获取唯一标识-openid-和会话密钥-session-key"><span class="nav-number">2.</span> <span class="nav-text">步骤2：获取唯一标识(openid)和会话密钥(session_key)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于登录"><span class="nav-number">1.</span> <span class="nav-text">关于登录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤1：在客户端获取当前登录微信用户的登录凭证-code"><span class="nav-number">1.1.</span> <span class="nav-text">步骤1：在客户端获取当前登录微信用户的登录凭证(code)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#步骤2：获取唯一标识-openid-和会话密钥-session-key"><span class="nav-number">1.2.</span> <span class="nav-text">步骤2：获取唯一标识(openid)和会话密钥(session_key)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">2.</span> <span class="nav-text">其他</span></a></li></ol></div>
             
 
           </div>
