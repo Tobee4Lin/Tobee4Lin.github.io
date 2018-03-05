@@ -94,7 +94,7 @@
 <meta property="og:description" content="学习vue全家桶中的状态管理工具 —— Vuex">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p4y9hsn68.bkt.clouddn.com/55.jpg">
-<meta property="og:updated_time" content="2018-03-05T13:12:10.156Z">
+<meta property="og:updated_time" content="2018-03-05T13:16:11.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vuex学习日记">
 <meta name="twitter:description" content="学习vue全家桶中的状态管理工具 —— Vuex">
@@ -369,7 +369,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,458 字
+                  1,459 字
                 </span>
               
 
@@ -436,7 +436,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将this.add()和this.reduce()分别映射为this.$store.commit('add')和this.$store.commit('reduce')</span></span><br><span class="line">        methods: mapMutations([<span class="string">'add'</span>, <span class="string">'reduce'</span>]),</span><br></pre></td></tr></table></figure>
 <p>此时，在Count.vue中我们便可以直接调用函数，跟没引用vuex插件一样。</p>
 <figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click="add"&gt;+&lt;/button&gt;</span><br><span class="line">&lt;button @click="reduce"&gt;-&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<p>接着是<strong>getters</strong>。getters从表面是获得的意思，可以把他看作在获取数据之前进行的一种再编辑,相当于对数据的一个过滤和加工。你可以把它看作store.js的计算属性。就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。</p>
+<h4 id="getters"><a href="#getters" class="headerlink" title="getters"></a>getters</h4><p>接着是<strong>getters</strong>。getters从表面是获得的意思，可以把他看作在获取数据之前进行的一种再编辑,相当于对数据的一个过滤和加工。你可以把它看作store.js的计算属性。就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。</p>
 <p>在store.js做如下操作：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//getters用于计算过滤</span></span><br><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">    count: <span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> state.count += <span class="number">100</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>同时导出getters。<br>接着先从vuex中解构赋值得到<strong>mapGetters</strong>，然后computed中，同理使用扩展运算符：</p>
@@ -614,7 +614,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#起步"><span class="nav-number">1.</span> <span class="nav-text">起步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#state"><span class="nav-number">2.</span> <span class="nav-text">state</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mutations"><span class="nav-number">3.</span> <span class="nav-text">mutations</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#起步"><span class="nav-number">1.</span> <span class="nav-text">起步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#state"><span class="nav-number">2.</span> <span class="nav-text">state</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mutations"><span class="nav-number">3.</span> <span class="nav-text">mutations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#getters"><span class="nav-number">4.</span> <span class="nav-text">getters</span></a></li></ol></div>
             
 
           </div>
