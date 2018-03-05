@@ -86,17 +86,19 @@
 
 
 
-<meta name="description" content="大年初四。just try it">
+<meta name="description" content="学习vue全家桶中的状态管理工具 —— Vuex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="杂想">
-<meta property="og:url" content="http://yoursite.com/2018/02/19/杂想/index.html">
+<meta property="og:title" content="Vuex学习日记">
+<meta property="og:url" content="http://yoursite.com/2018/03/05/Vuex学习日记/index.html">
 <meta property="og:site_name" content="Tobee4Lin">
-<meta property="og:description" content="大年初四。just try it">
+<meta property="og:description" content="学习vue全家桶中的状态管理工具 —— Vuex">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-19T16:00:18.774Z">
+<meta property="og:image" content="http://p4y9hsn68.bkt.clouddn.com/55.jpg">
+<meta property="og:updated_time" content="2018-03-05T13:12:10.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="杂想">
-<meta name="twitter:description" content="大年初四。just try it">
+<meta name="twitter:title" content="Vuex学习日记">
+<meta name="twitter:description" content="学习vue全家桶中的状态管理工具 —— Vuex">
+<meta name="twitter:image" content="http://p4y9hsn68.bkt.clouddn.com/55.jpg">
 
 
 
@@ -126,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/19/杂想/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/05/Vuex学习日记/"/>
 
 
 
 
 
-  <title>杂想 | Tobee4Lin</title>
+  <title>Vuex学习日记 | Tobee4Lin</title>
   
 
 
@@ -284,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/19/杂想/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/05/Vuex学习日记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tobee">
@@ -301,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">杂想</h1>
+          <h1 class="post-title" itemprop="name headline">Vuex学习日记</h1>
         
 
         <div class="post-meta">
@@ -313,8 +315,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-19T23:53:52+08:00">
-                2018-02-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-05T21:03:47+08:00">
+                2018-03-05
               </time>
             
 
@@ -336,8 +338,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
                   </a>
                 </span>
 
@@ -367,7 +369,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  163 字
+                  1,458 字
                 </span>
               
 
@@ -383,7 +385,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  6 分钟
                 </span>
               
             </div>
@@ -404,8 +406,48 @@
       
 
       
-        <p>大年初四。just try it<br><a id="more"></a><br>今天花了一个下午还有晚上的时间利用hexo和GitHub page搭建了属于自己的博客并对其做了个性化的DIY，同时也进行了前两篇博客的撰写，之后可能要买个域名将其解析到GitHub page上。接下来，我会将以前在没有博客的时候总结的一些学习上的坑都用博客的方式重新记录下来，勉励自己，同时也希望帮到别人，哪怕一个人。而且接下来的学习生涯也会在博客上留下我的足迹。</p>
-<p>祝大家新年快乐。</p>
+        <p><img src="http://p4y9hsn68.bkt.clouddn.com/55.jpg" alt="vuex状态管理"></p>
+<p>学习vue全家桶中的状态管理工具 —— Vuex<br><a id="more"></a></p>
+<p>挺久之前就开始学习<strong>vue</strong>了，<strong>vue</strong>全家桶中的<strong>vuex</strong>也有稍微了解，但是那个时候还没有对其进行更熟悉的了解吧，今天就重新认真学习了下。</p>
+<p>看看官方对<strong>Vuex</strong>的解释，</p>
+<blockquote>
+<p><strong>Vuex</strong> 是一个专为 <strong>Vue.js</strong> 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
+</blockquote>
+<p>在学习之后，个人对其也有了自己的理解，我觉得可以理解为在data中的属性需要共享给其他vue组件使用的部分。简单的说就是data中需要共用的属性。比如做一个购物车，那么购物车的内容就需要在不同页面中进行保留和传递，这时候就可以使用Vuex对其进行集中管理。在此之前，我们都是用父子组件互相传值来完成的。</p>
+<p>在官方文档中，会学到 Vue 的一些核心概念，深入理解所有的概念对于使用 Vuex 来说是必要的。<br>接下来我自己通过一个小案例来弄清楚这些核心概念，当做一个总结了。</p>
+<h4 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h4><p>第一步先通过<strong>vue-cli</strong>脚手架工具搭建起vue项目运行的环境，这里就不多说了。<br>接着通过npm安装vuex。本人用的是VScode，所以自带了终端，直接<code>ctrl+`</code>打开终端，输入下面命令行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vuex --save</span><br></pre></td></tr></table></figure>
+<p><strong>vuex</strong>在开发过程需要用到，所以必须加上<code>--save</code>选项。</p>
+<p>接着新建store.js文件，将vue和vuex导入，并且使用vuex。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex);</span><br></pre></td></tr></table></figure>
+<p>接着创建一个仓库state（我自己的理解 - -），再放入一个变量count。（做一个小计数器）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//state理解为存放共享状态的仓库</span></span><br><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line">    count: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后将内容导出：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="state"><a href="#state" class="headerlink" title="state"></a>state</h4><p>在component文件夹下创建Count.vue模板文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;msg&#125;&#125;&lt;/h2&gt;&lt;hr/&gt;</span><br><span class="line">        &lt;h3&gt;&#123;&#123;$store.state.count&#125;&#125; --- &#123;&#123;count&#125;&#125;&lt;/h3&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    import store from &apos;../vuex/store.js&apos;;</span><br><span class="line">    //解构赋值得到mapState</span><br><span class="line">    import &#123; mapState &#125; from &apos;vuex&apos;;</span><br><span class="line">    export default &#123;</span><br><span class="line">        data() &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                msg: &apos;Hello Vuex&apos;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        //利用mapState方法可以简化拼写，如$store.state.count简化为count</span><br><span class="line">        //最容易理解的写法为：</span><br><span class="line">        // computed: &#123;</span><br><span class="line">        //     count() &#123;</span><br><span class="line">        //         return this.$store.state.count;</span><br><span class="line">        //     &#125;</span><br><span class="line">        // &#125;,</span><br><span class="line">        computed: &#123;</span><br><span class="line">            ...mapState([&apos;count&apos;])</span><br><span class="line">        &#125;,</span><br><span class="line">        store</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;&quot;&gt;</span><br><span class="line">    </span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>一开始就需要<strong>引入并注册store</strong>，这点很重要。<br>其中利用<strong>mapState</strong>辅助函数帮助我们生成计算属性。如上HTML代码中的<code>$store.state.count</code>可以通过mapState直接简化为count。只需从vuex中解构赋值得到mapState，再在computed中做映射。由于mapState 函数返回的是一个对象，所以可以通过ES6新增的对象展开运算符<code>...</code>将它与局部计算属性混合使用。</p>
+<h4 id="mutations"><a href="#mutations" class="headerlink" title="mutations"></a>mutations</h4><p>接下来为计数器增加两个按钮，一加一减。Count.vue中的HTML代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;msg&#125;&#125;&lt;/h2&gt;&lt;hr/&gt;</span><br><span class="line">        &lt;h3&gt;&#123;&#123;$store.state.count&#125;&#125; --- &#123;&#123;count&#125;&#125;&lt;/h3&gt;</span><br><span class="line">        &lt;!--新增--&gt;</span><br><span class="line">        &lt;p&gt;</span><br><span class="line">            &lt;button @click=&quot;$store.commit(&apos;add&apos;,5)&quot;&gt;+&lt;/button&gt;</span><br><span class="line">            &lt;button @click=&quot;$store.commit(&apos;reduce&apos;)&quot;&gt;-&lt;/button&gt;</span><br><span class="line">        &lt;/p&gt;</span><br><span class="line">        &lt;!--新增--&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+<p>上面增加了两个方法add和reduce，接下来在store.js中分别实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//mutations用于改变state中的状态值</span></span><br><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">    add(state, n) &#123;</span><br><span class="line">        state.count += n;</span><br><span class="line">    &#125;,<span class="comment">//可传第二个参数</span></span><br><span class="line">    reduce(state) &#123;</span><br><span class="line">        state.count--</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到，这里使用<strong>mutations</strong>。更改 Vuex 的 <strong>store</strong> 中的状态的唯一方法是提交 <strong>mutation</strong>，即上面可见的，需要调用<code>$store.commit()</code>方法。参数则为函数。同时也要像前面state一样，导出mutations。</p>
+<p>如果我们希望直接通过<code>@click=&#39;add()&#39;</code>这样就可以直接调用方法，而不需要利用$store.commit()时，我们可以使用mapMutations。<br>在Count.vue中，同理先从vuex中解构赋值得到<strong>mapMutations</strong>，然后在methods中进行方法的映射：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将this.add()和this.reduce()分别映射为this.$store.commit('add')和this.$store.commit('reduce')</span></span><br><span class="line">        methods: mapMutations([<span class="string">'add'</span>, <span class="string">'reduce'</span>]),</span><br></pre></td></tr></table></figure>
+<p>此时，在Count.vue中我们便可以直接调用函数，跟没引用vuex插件一样。</p>
+<figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click="add"&gt;+&lt;/button&gt;</span><br><span class="line">&lt;button @click="reduce"&gt;-&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<p>接着是<strong>getters</strong>。getters从表面是获得的意思，可以把他看作在获取数据之前进行的一种再编辑,相当于对数据的一个过滤和加工。你可以把它看作store.js的计算属性。就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。</p>
+<p>在store.js做如下操作：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//getters用于计算过滤</span></span><br><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">    count: <span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> state.count += <span class="number">100</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>同时导出getters。<br>接着先从vuex中解构赋值得到<strong>mapGetters</strong>，然后computed中，同理使用扩展运算符：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">	...mapGetters([<span class="string">'count'</span>])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此时跟普通Vue实例中的computed一样，当需要被计算的值发送变化时，计算属性先做出变化，改变当前的值。</p>
+<p>在学习的过程中还有两个概念——<strong>action</strong>和<strong>module</strong>。</p>
+<blockquote>
+<p><strong>action</strong> : actions和之前讲的mutations功能基本一样，不同点是，actions是异步的改变state状态，而mutations是同步改变状态。</p>
+<p><strong>module</strong> : 状态管理器的模块组操作。随着项目的复杂性增加，我们共享的状态越来越多，这时候我们就需要把我们状态的各种操作进行一个分组，分组后再进行按组编写。</p>
+</blockquote>
+<p>这里有空的话会再去看<a href="https://vuex.vuejs.org/zh-cn/actions.html" target="_blank" rel="noopener">官方文档</a>或者<a href="http://jspang.com/2017/05/03/vuex/" target="_blank" rel="noopener">技术胖的博客</a>，进行一个更系统的学习。</p>
 
       
     </div>
@@ -430,8 +472,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/19/对hexo中Next主题的DIY/" rel="next" title="对hexo中Next主题的DIY">
-                <i class="fa fa-chevron-left"></i> 对hexo中Next主题的DIY
+              <a href="/2018/03/02/关于微信小程序的一些记录/" rel="next" title="关于学习微信小程序的一些记录">
+                <i class="fa fa-chevron-left"></i> 关于学习微信小程序的一些记录
               </a>
             
           </div>
@@ -439,10 +481,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/20/重拾git/" rel="prev" title="重拾git">
-                重拾git <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -499,8 +537,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -557,6 +604,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#起步"><span class="nav-number">1.</span> <span class="nav-text">起步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#state"><span class="nav-number">2.</span> <span class="nav-text">state</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mutations"><span class="nav-number">3.</span> <span class="nav-text">mutations</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
