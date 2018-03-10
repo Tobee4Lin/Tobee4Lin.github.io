@@ -86,16 +86,19 @@
 
 
 
+<meta name="description" content="学习css预编译器sass。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="读《三体》有感">
-<meta property="og:url" content="http://yoursite.com/2018/03/09/读《三体》有感/index.html">
+<meta property="og:title" content="sass学习日记">
+<meta property="og:url" content="http://yoursite.com/2018/03/10/sass学习日记/index.html">
 <meta property="og:site_name" content="Tobee4Lin">
+<meta property="og:description" content="学习css预编译器sass。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p4y9hsn68.bkt.clouddn.com/20160605204647wLq3yatCBc01T8sA.webp">
-<meta property="og:updated_time" content="2018-03-09T13:15:49.153Z">
+<meta property="og:image" content="http://p4y9hsn68.bkt.clouddn.com/header-typo-650x3001.png">
+<meta property="og:updated_time" content="2018-03-10T08:40:02.242Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="读《三体》有感">
-<meta name="twitter:image" content="http://p4y9hsn68.bkt.clouddn.com/20160605204647wLq3yatCBc01T8sA.webp">
+<meta name="twitter:title" content="sass学习日记">
+<meta name="twitter:description" content="学习css预编译器sass。">
+<meta name="twitter:image" content="http://p4y9hsn68.bkt.clouddn.com/header-typo-650x3001.png">
 
 
 
@@ -125,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/09/读《三体》有感/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/10/sass学习日记/"/>
 
 
 
 
 
-  <title>读《三体》有感 | Tobee4Lin</title>
+  <title>sass学习日记 | Tobee4Lin</title>
   
 
 
@@ -283,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/09/读《三体》有感/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/10/sass学习日记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tobee">
@@ -300,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">读《三体》有感</h1>
+          <h1 class="post-title" itemprop="name headline">sass学习日记</h1>
         
 
         <div class="post-meta">
@@ -312,8 +315,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-09T20:46:57+08:00">
-                2018-03-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-10T16:01:43+08:00">
+                2018-03-10
               </time>
             
 
@@ -335,8 +338,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
                   </a>
                 </span>
 
@@ -366,7 +369,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  681 字
+                  1,169 字
                 </span>
               
 
@@ -382,7 +385,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -403,12 +406,64 @@
       
 
       
-        <p><img src="http://p4y9hsn68.bkt.clouddn.com/20160605204647wLq3yatCBc01T8sA.webp" alt="三体"><br><a id="more"></a></p>
+        <p><img src="http://p4y9hsn68.bkt.clouddn.com/header-typo-650x3001.png" alt="sass学习"></p>
+<p>学习css预编译器sass。<br><a id="more"></a></p>
+<p>CSS预处理器有好几种，less，sass，stylus等等。它们的优点是：语言级逻辑处理，有动态特性，可以改善项目结构。它们的基本思想是，<strong>用一种专门的编程语言，进行网页样式设计，然后再编译成正常的CSS文件</strong>。所以今天选择其中的一种sass来学习，其实其他的本质上没有太大区别。</p>
+<h4 id="sass安装"><a href="#sass安装" class="headerlink" title="sass安装"></a>sass安装</h4><p>因为sass依赖于ruby环境，所以装sass之前先确认装了ruby。可以先去官网下载ruby（<a href="http://rubyinstaller.org/downloads" target="_blank" rel="noopener">http://rubyinstaller.org/downloads</a>）。<br>在安装的时候，勾选Add Ruby executables to your PATH这个选项，添加环境变量，不然以后使用编译软件的时候会提示找不到ruby环境。</p>
+<p>安装完Ruby之后，在刚才我们安装的ruby中，打开Start Command Prompt with Ruby，然后输入下列命令行进行安装sass操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install sass</span><br></pre></td></tr></table></figure>
+<p>查看是否安装成功：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sass -v</span><br></pre></td></tr></table></figure>
+<p>然后就可以使用了。</p>
+<h4 id="使用sass"><a href="#使用sass" class="headerlink" title="使用sass"></a>使用sass</h4><p>网上教程有使用命令行的，我自己选择使用图形界面来进行操作，比较直观明了。下载<strong>Koala</strong>（<a href="http://koala-app.com/index-zh.html" target="_blank" rel="noopener">http://koala-app.com/index-zh.html</a>）。</p>
 <blockquote>
-<p>《<strong>三体</strong>》是中国大陆作家<strong>刘慈欣</strong>于2006年5月至12月在《科幻世界》杂志上连载的一部长篇科幻小说，出版后成为中国大陆最畅销的科幻长篇小说之一[1]。2008年，该书的单行本由重庆出版社出版。本书是三体系列（系列原名为：地球往事三部曲）的第一部，该系列的第二部《三体II：黑暗森林》已经于2008年5月出版。2010年11月，第三部《三体III：死神永生》出版发行。 2011年，“地球往事三部曲”在台湾陆续出版。小说的英文版获得美国科幻奇幻作家协会2014年度“星云奖”提名[2]，并荣获2015年雨果奖最佳小说奖。</p>
+<p><strong>koala</strong>是一个前端预处理器语言图形编译工具，支持Less、Sass、Compass、CoffeeScript，帮助web开发者更高效地使用它们进行开发。跨平台运行，完美兼容windows、linux、mac。</p>
 </blockquote>
-<p>这是<em>维基百科</em> 对《三体》及其作者的基本介绍。</p>
-<p>半个月前，心血来潮开始看《三体》。总计花了近24个小时，终于看完这部科幻著作。小说分为三章，分别是《三体》、《三体Ⅱ·黑暗森林》、《三体Ⅲ·死神永生》。国内科幻小说能到达这样一个程度实属可贵，故事很长但是没有冗余之处，一环扣一环，而且总能在适当之处通过紧张的环节或是描写来刺激读者的神经。故事主线从现代开始，然后通过人物与情节不断发展，慢慢展现了这部小说的灵魂。从文化大革命再到神奇的三体世界，从一颗渺小的质子再到无限的宇宙，这部小说带给读者的不只是物理定律和知识的美妙，同时也为我们奉上想象力不能触及的宇宙世界万物这饕餮大餐。书中人物栩栩如生，在我脑海中挥散不去，像是救世主“罗辑”自己捏造出来的情人一般，虽然虚假，但也被赋予了生命。<br>小说建立在大量现有基础科学水平上的无限遐想与延伸，时间线不停变化于古今中外。个人觉得第二部黑暗森林最为出彩。“黑暗森林”法则，实在精妙，“毁灭一个文明比观测一个文明容易得多”，地球就像在篝火旁的小孩子，对着四周的黑暗大喊“我在这里”，于是，灭顶之灾。小说最终以太阳系银河系乃至宇宙覆灭为结局，最后看完只有震撼和对作者脑洞的佩服。<br>文笔不好，只能写这么多，对于这样一部好书，我不想读完就完，可以留下点什么呢，就是一篇用心写的读后感了。</p>
+<p>每次做项目的时候，新建<strong>style</strong>文件夹，其中放置各种scss文件。然后最后将style文件夹通过Koala编译成许多普通的css文件然后集成到一个css上（如index.css）。接着在页面引入这个index.css就可以了。（按照我的理解进行的表述 - -）</p>
+<h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h4><h5 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h5><p>SASS允许使用变量，所有变量以<code>$</code>开头。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$blue</span> : <span class="number">#1875e7</span>;　</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">　　<span class="attribute">color</span> : <span class="variable">$blue</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果变量需要镶嵌在字符串之中，就必须需要写在<code>#{}</code>之中。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$side</span> : left;</span><br><span class="line"><span class="selector-class">.rounded</span> &#123;</span><br><span class="line">	<span class="attribute">border</span>-#&#123;<span class="variable">$side</span>&#125;-radius: <span class="number">5px</span>;</span><br><span class="line">&#125;<span class="comment">//结果：border-left-ridius</span></span><br></pre></td></tr></table></figure>
+<h5 id="计算功能"><a href="#计算功能" class="headerlink" title="计算功能"></a>计算功能</h5><p>SASS允许在代码中使用<strong>算式</strong>。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">　　<span class="attribute">margin</span>: (<span class="number">14px</span>/<span class="number">2</span>);</span><br><span class="line">　　<span class="attribute">top</span>: <span class="number">50px</span> + <span class="number">100px</span>;</span><br><span class="line">　　<span class="attribute">right</span>: <span class="variable">$var</span> * <span class="number">10%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h5><p>SASS允许<strong>选择器嵌套</strong>。这一点对我们编写样式是十分直观明了的。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">h1</span> &#123;</span><br><span class="line">　　<span class="attribute">color</span> : red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以写成：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">　　<span class="selector-tag">h1</span> &#123;</span><br><span class="line">　　　<span class="attribute">color</span>:red;</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>属性也可以嵌套，比如border-color属性，可以写成：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">　　<span class="attribute">border</span>: &#123;</span><br><span class="line">　　　　color: red;</span><br><span class="line">　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意，border后面必须加上<strong>冒号</strong>。<br>在嵌套的代码块内，可以使用<code>&amp;</code>引用父元素。比如a:hover伪类，可以写成：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">	&amp;:hover &#123; <span class="attribute">color</span>: <span class="number">#ffb3ff</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h5><p>SASS共有两种注释风格。</p>
+<blockquote>
+<p>标准的CSS注释 /<em> comment </em>/ ，会保留到编译后的文件。<br>单行注释 // comment，只保留在SASS源文件中，编译后被省略。<br>在/<em>后面加一个感叹号，表示这是”重要注释”。即使是压缩模式编译，也会保留这行注释，通常可以用于声明版权信息。<br>　　/</em>!<br>　　　　重要注释！<br>　　*/</p>
+</blockquote>
+<h4 id="代码的重用"><a href="#代码的重用" class="headerlink" title="代码的重用"></a>代码的重用</h4><h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><p>SASS允许一个选择器，继承另一个选择器。比如，现有class1：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.class1</span> &#123;</span><br><span class="line">　　　　<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>class2要继承class1，就要使用<strong>@extend</strong>命令：
+　　</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.class2</span> &#123;</span><br><span class="line">　　　　@<span class="keyword">extend</span> .class1;</span><br><span class="line">　　　　<span class="attribute">font-size</span>:<span class="number">120%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Mixin"><a href="#Mixin" class="headerlink" title="Mixin"></a>Mixin</h5><p>Mixin有点像C语言的宏（macro），是可以重用的代码块。<br>使用<strong>@mixin</strong>命令，定义一个代码块。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> left &#123;</span><br><span class="line">　　　　<span class="attribute">float</span>: left;</span><br><span class="line">　　　　<span class="attribute">margin-left</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用<strong>@include</strong>命令，调用这个mixin。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">　　　　@<span class="keyword">include</span> left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>mixin的强大之处，在于可以<strong>指定参数</strong>和<strong>缺省值</strong>。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> left(<span class="variable">$value</span>: 10px) &#123;</span><br><span class="line">　　　　<span class="attribute">float</span>: left;</span><br><span class="line">　　　　<span class="attribute">margin-right</span>: <span class="variable">$value</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用的时候，根据需要加入参数：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">　　　　@<span class="keyword">include</span> left(<span class="number">20px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下面是一个mixin的实例，用来生成浏览器前缀。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> rounded(<span class="variable">$vert</span>, <span class="variable">$horz</span>, <span class="variable">$radius</span>: 10px) &#123;</span><br><span class="line">　　　　<span class="attribute">border</span>-#&#123;<span class="variable">$vert</span>&#125;-#&#123;<span class="variable">$horz</span>&#125;-radius: <span class="variable">$radius</span>;</span><br><span class="line">　　　　-moz-<span class="attribute">border-radius</span>-#&#123;<span class="variable">$vert</span>&#125;#&#123;<span class="variable">$horz</span>&#125;: <span class="variable">$radius</span>;</span><br><span class="line">　　　　-webkit-<span class="attribute">border</span>-#&#123;<span class="variable">$vert</span>&#125;-#&#123;<span class="variable">$horz</span>&#125;-radius: <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用的时候，可以像下面这样调用：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#navbar</span> <span class="selector-tag">li</span> &#123; @<span class="keyword">include</span> rounded(top, left); &#125;</span><br><span class="line"><span class="selector-id">#footer</span> &#123; @<span class="keyword">include</span> rounded(top, left, 5px); &#125;</span><br></pre></td></tr></table></figure>
+<h5 id="颜色函数"><a href="#颜色函数" class="headerlink" title="颜色函数"></a>颜色函数</h5><p>SASS提供了一些内置的颜色函数，以便生成系列颜色。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lighten(<span class="selector-id">#cc3</span>, 10%) <span class="comment">// #d6d65c</span></span><br><span class="line">darken(<span class="selector-id">#cc3</span>, 10%) <span class="comment">// #a3a329</span></span><br><span class="line">grayscale(<span class="selector-id">#cc3</span>) <span class="comment">// #808080</span></span><br><span class="line">complement(<span class="selector-id">#cc3</span>) <span class="comment">// #33c</span></span><br></pre></td></tr></table></figure>
+<h5 id="插入文件"><a href="#插入文件" class="headerlink" title="插入文件"></a>插入文件</h5><p>@import命令，用来插入外部文件。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">import</span> <span class="string">"path/filename.scss"</span>;</span><br></pre></td></tr></table></figure>
+<p>如果插入的是.css文件，则等同于css的import命令。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">import</span> <span class="string">"foo.css"</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="高级用法"><a href="#高级用法" class="headerlink" title="高级用法"></a>高级用法</h4><h5 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h5><p>SASS允许用户编写自己的函数。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@function double(<span class="variable">$n</span>) &#123;</span><br><span class="line">　　@return <span class="variable">$n</span> * 2;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#sidebar</span> &#123;</span><br><span class="line">　　<span class="attribute">width</span>: double(<span class="number">5px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这也是很方便的一点。当时在做vue仿饿了么的时候就用到了<strong>stylus</strong>中相同的特性，通过传递不同参数，生成不同样式，进而使得代码量不冗余。</p>
 
       
     </div>
@@ -433,8 +488,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/07/mongo学习笔记（四）/" rel="next" title="mongo学习笔记（四）">
-                <i class="fa fa-chevron-left"></i> mongo学习笔记（四）
+              <a href="/2018/03/09/读《三体》有感/" rel="next" title="读《三体》有感">
+                <i class="fa fa-chevron-left"></i> 读《三体》有感
               </a>
             
           </div>
@@ -442,10 +497,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/10/sass学习日记/" rel="prev" title="sass学习日记">
-                sass学习日记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -502,8 +553,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -560,6 +620,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#sass安装"><span class="nav-number">1.</span> <span class="nav-text">sass安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用sass"><span class="nav-number">2.</span> <span class="nav-text">使用sass</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本用法"><span class="nav-number">3.</span> <span class="nav-text">基本用法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#变量"><span class="nav-number">3.1.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计算功能"><span class="nav-number">3.2.</span> <span class="nav-text">计算功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#嵌套"><span class="nav-number">3.3.</span> <span class="nav-text">嵌套</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#注释"><span class="nav-number">3.4.</span> <span class="nav-text">注释</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码的重用"><span class="nav-number">4.</span> <span class="nav-text">代码的重用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#继承"><span class="nav-number">4.1.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Mixin"><span class="nav-number">4.2.</span> <span class="nav-text">Mixin</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#颜色函数"><span class="nav-number">4.3.</span> <span class="nav-text">颜色函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#插入文件"><span class="nav-number">4.4.</span> <span class="nav-text">插入文件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高级用法"><span class="nav-number">5.</span> <span class="nav-text">高级用法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#自定义函数"><span class="nav-number">5.1.</span> <span class="nav-text">自定义函数</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
