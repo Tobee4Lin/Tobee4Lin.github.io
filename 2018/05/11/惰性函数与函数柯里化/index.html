@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="tobee&apos;s personal blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tobee4Lin">
-<meta property="og:url" content="http://yoursite.com/categories/随笔/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="惰性函数与函数柯里化">
+<meta property="og:url" content="http://yoursite.com/2018/05/11/惰性函数与函数柯里化/index.html">
 <meta property="og:site_name" content="Tobee4Lin">
-<meta property="og:description" content="tobee&apos;s personal blog">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p4y9hsn68.bkt.clouddn.com/curry_images.png">
+<meta property="og:updated_time" content="2018-05-11T14:53:23.381Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tobee4Lin">
-<meta name="twitter:description" content="tobee&apos;s personal blog">
+<meta name="twitter:title" content="惰性函数与函数柯里化">
+<meta name="twitter:image" content="http://p4y9hsn68.bkt.clouddn.com/curry_images.png">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/随笔/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/11/惰性函数与函数柯里化/"/>
 
 
 
 
 
-  <title>分类: 随笔 | Tobee4Lin</title>
+  <title>惰性函数与函数柯里化 | Tobee4Lin</title>
   
 
 
@@ -150,7 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/Tobee4Lin"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
 
@@ -269,83 +269,210 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>随笔<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/11/惰性函数与函数柯里化/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tobee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tobee4Lin">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/03/09/读《三体》有感/" itemprop="url">
-              
-                <span itemprop="name">读《三体》有感</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">惰性函数与函数柯里化</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-09T20:46:57+08:00"
-              content="2018-03-09" >
-          03-09
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-11T22:14:29+08:00">
+                2018-05-11
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  710 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/19/杂想/" itemprop="url">
-              
-                <span itemprop="name">杂想</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-19T23:53:52+08:00"
-              content="2018-02-19" >
-          02-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <p><img src="http://p4y9hsn68.bkt.clouddn.com/curry_images.png" alt="惰性函数与函数柯里化"></p>
+<a id="more"></a>
+<h3 id="惰性函数"><a href="#惰性函数" class="headerlink" title="惰性函数"></a>惰性函数</h3><p>就我自己对其的理解来说，<strong>惰性函数</strong>表示函数执行的分支只会在函数第一次掉用的时候执行，在第一次调用过程中，该函数会被覆盖为另一个按照合适方式执行的函数，这样任何对原函数的调用就不用再经过执行的分支了。</p>
+<p>来一个例子了解下。在我们平时耍ajax时候，需要不断新建xhr对象，这时候就可以考虑使用惰性函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> createXHR = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> xhr = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> XMLHttpRequest !== <span class="string">'undefined'</span>) &#123;</span><br><span class="line">        xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">        createXHR = <span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="comment">//覆盖原有函数</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> XMLHttpRequest(); </span><br><span class="line">	    &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">try</span> &#123;</span><br><span class="line">              <span class="comment">//假设进行浏览器对应xhr对象查找</span></span><br><span class="line">          &#125; <span class="keyword">catch</span>(e) &#123;</span><br><span class="line">              <span class="comment">//假设进行浏览器对应xhr对象查找</span></span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> xhr;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>第一次执行函数会先各种查找对应浏览器支持的xhr然后返回该xhr，后面执行函数都直接返回一个新的浏览器对应支持的xhr对象，就不必每次都去根据浏览器判断xhr对象。</p>
+<p>另一个例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> addEvent = <span class="function"><span class="keyword">function</span>(<span class="params">type, el, fn</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">if</span>(<span class="built_in">window</span>.addEventListener) &#123;</span><br><span class="line">         el.addEventListener(type, fn, <span class="literal">false</span>);</span><br><span class="line">         addEvent = <span class="function"><span class="keyword">function</span>(<span class="params">type, el, fn</span>) </span>&#123;</span><br><span class="line">             el.addEventListener(type, fn, <span class="literal">false</span>);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125; <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">window</span>.attachEvent) &#123;</span><br><span class="line">         el.attachEvent(<span class="string">'on'</span> + type, fn);</span><br><span class="line">         addEvent = <span class="function"><span class="keyword">function</span>(<span class="params">type, el, fn</span>) </span>&#123;</span><br><span class="line">             el.attachEvent(<span class="string">'on'</span> + type, fn);</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>我们每当使用一次 <strong>addEvent</strong> 函数时都会进行一次判断。惰性函数帮我们解决这个问题。</p>
+<h3 id="函数柯里化"><a href="#函数柯里化" class="headerlink" title="函数柯里化"></a>函数柯里化</h3><p>维基百科上这样定义<strong>函数柯里化</strong>：</p>
+<blockquote>
+<p>在数学和计算机科学中，柯里化是一种将使用多个参数的一个函数转换成一系列使用一个参数的函数的技术。</p>
+</blockquote>
+<p>此处列出两种<strong>curry</strong>函数实现方式：</p>
+<h4 id="实现一"><a href="#实现一" class="headerlink" title="实现一"></a>实现一</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> curry = <span class="function"><span class="keyword">function</span>(<span class="params">fn</span>) =&gt; </span>&#123;</span><br><span class="line">	<span class="keyword">let</span> args = [].slice.call(<span class="built_in">arguments</span>, <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="keyword">let</span> innerArgs = [].slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">		<span class="keyword">let</span> finalArgs = innerArgs.concat(args);</span><br><span class="line">		<span class="keyword">return</span> fn.apply(<span class="keyword">this</span>, finalArgs);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> add = <span class="function">(<span class="params">a, b, c</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b + c;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> s1 = sub_curry(add, <span class="number">10</span>)(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"><span class="keyword">let</span> s2 = sub_curry(add)(<span class="number">1</span>, <span class="number">2</span>, <span class="number">10</span>);</span><br><span class="line"><span class="keyword">let</span> s3 = sub_curry(add, <span class="number">10</span>, <span class="number">1</span>)(<span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(s1);</span><br><span class="line"><span class="built_in">console</span>.log(s2);</span><br><span class="line"><span class="built_in">console</span>.log(s3);</span><br></pre></td></tr></table></figure>
+<h4 id="实现二"><a href="#实现二" class="headerlink" title="实现二"></a>实现二</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> curry = <span class="function"><span class="keyword">function</span>(<span class="params">fn, args</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">let</span> length = fn.length; <span class="comment">//length即为函数形参的个数</span></span><br><span class="line">    args = args || [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">let</span> _args = args.slice(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">let</span> arg, i;</span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; <span class="built_in">arguments</span>.length; i++) &#123;</span><br><span class="line">            arg = <span class="built_in">arguments</span>[i];</span><br><span class="line">            _args.push(arg);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(_args.length &lt; length) &#123;</span><br><span class="line">            <span class="keyword">return</span> curry.call(<span class="keyword">this</span>, fn, _args);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> fn.apply(<span class="keyword">this</span>, _args);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> con = <span class="function"><span class="keyword">function</span>(<span class="params">a, b, c</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log([a, b, c]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> s = curry(con);</span><br><span class="line">s(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">s(<span class="number">1</span>, <span class="number">2</span>)(<span class="number">3</span>);</span><br><span class="line">s(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+<p>柯里化可是将一个多参数的函数转换成多个单参数的函数，但是现在我们不仅可以传入一个参数，还可以一次传入两个参数，甚至更多参数.</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/22/Vue组件通信模式/" rel="next" title="Vue组件通信模式">
+                <i class="fa fa-chevron-left"></i> Vue组件通信模式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -353,6 +480,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDI1OS8xMDc5Ng=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -373,8 +509,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -431,6 +576,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#惰性函数"><span class="nav-number">1.</span> <span class="nav-text">惰性函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数柯里化"><span class="nav-number">2.</span> <span class="nav-text">函数柯里化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实现一"><span class="nav-number">2.1.</span> <span class="nav-text">实现一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现二"><span class="nav-number">2.2.</span> <span class="nav-text">实现二</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -579,6 +740,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -607,6 +772,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
