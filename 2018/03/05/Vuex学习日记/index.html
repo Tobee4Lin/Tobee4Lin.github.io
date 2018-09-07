@@ -435,7 +435,7 @@
 <p>如果我们希望直接通过<code>@click=&#39;add()&#39;</code>这样就可以直接调用方法，而不需要利用$store.commit()时，我们可以使用mapMutations。<br>在Count.vue中，同理先从vuex中解构赋值得到<strong>mapMutations</strong>，然后在methods中进行方法的映射：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将this.add()和this.reduce()分别映射为this.$store.commit('add')和this.$store.commit('reduce')</span></span><br><span class="line">        methods: mapMutations([<span class="string">'add'</span>, <span class="string">'reduce'</span>]),</span><br></pre></td></tr></table></figure>
 <p>此时，在Count.vue中我们便可以直接调用函数，跟没引用vuex插件一样。</p>
-<figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click="add"&gt;+&lt;/button&gt;</span><br><span class="line">&lt;button @click="reduce"&gt;-&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight vbscript-html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"add"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"reduce"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <h4 id="getters"><a href="#getters" class="headerlink" title="getters"></a>getters</h4><p>接着是<strong>getters</strong>。getters从表面是获得的意思，可以把他看作在获取数据之前进行的一种再编辑,相当于对数据的一个过滤和加工。你可以把它看作store.js的计算属性。就像计算属性一样，getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。</p>
 <p>在store.js做如下操作：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//getters用于计算过滤</span></span><br><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">    count: <span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> state.count += <span class="number">100</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -570,7 +570,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -660,7 +660,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">| 博客全站共11.6k字</span>
+  <span class="post-count">| 博客全站共11.8k字</span>
 </div>
 
         
